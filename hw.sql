@@ -100,9 +100,13 @@ SELECT AVG(rating) FROM ratings
 WHERE user_id=1;
 
 -- question 20 --
-SELECT COUNT(user_id) FROM ratings
-WHERE user_id = 1;
+SELECT user_id, COUNT(user_id) FROM ratings
+GROUP BY user_id
+ORDER BY COUNT(user_id) DESC;
 
 
 -- question 21 --
 
+SELECT AVG(rating) FROM ratings
+GROUP BY user_id
+ORDER BY user_id DESC;
