@@ -110,3 +110,24 @@ ORDER BY COUNT(user_id) DESC;
 SELECT AVG(rating) FROM ratings
 GROUP BY user_id
 ORDER BY user_id DESC;
+
+
+-- question 22 -- 
+
+SELECT user_id, COUNT(user_id), AVG(rating) FROM ratings
+GROUP BY user_id
+ORDER BY COUNT(user_id):
+
+-- question 23 -- 
+SELECT user_id, COUNT(user_id), AVG(rating) FROM ratings
+GROUP BY user_id
+HAVING COUNT(user_id)>50
+ORDER BY AVG(rating) DESC ;
+
+
+-- question 24 -- 
+
+SELECT AVG(rating) FROM ratings
+GROUP BY movie_id
+HAVING AVG(rating) > 4;
+
